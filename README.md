@@ -9,7 +9,7 @@ The "To-Do" tab is to leave notes on what to do on a certain day.
 
 The "Notes" tab expands into a sub-menu containing 3 other buttons (Pages), can be used for notes on different topics.
 
-The "Projects" tab design is complete, currently working on implementing a way to open a file from the saved link. 
+The "Projects" tab is complete, should be working as intended, currently missing a database to store the information.
 
 The "Help" tab will explain how the application works.
 
