@@ -80,12 +80,19 @@ namespace HelperApp
                 MessageBox.Show(string.Format("{0} Directory does not exist!", folderPath));
             }
         }
-        // currenty does not work properly, need to figure out how to open specific cell with the link
-        private void projectsGrid_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            var pathTo = sender as string;
 
-            OpenFolder(pathTo);
+        private void projectsGridFolderPath_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
+            {
+                DataGridViewCell cell = projectsGrid.Rows[e.RowIndex].Cells[e.ColumnIndex];
+                if (cell is DataGridViewLinkCell)
+                {
+                    string path = cell.Value.ToString();
+                    OpenFolder(path);
+                }
+            }
         }
+        
     }
 }
