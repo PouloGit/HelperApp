@@ -54,7 +54,7 @@
             projectsGrid.RowTemplate.Height = 25;
             projectsGrid.Size = new Size(630, 333);
             projectsGrid.TabIndex = 0;
-            projectsGrid.CellClick += projectsGrid_CellClick;
+            projectsGrid.CellContentClick += projectsGridFolderPath_CellContentClick;
             // 
             // addNewProject
             // 
